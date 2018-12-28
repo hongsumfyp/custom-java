@@ -10,7 +10,8 @@ jobs:
     
     docker:
       # specify the version you desire here
-      -image: circleci/openjdk:8-jdk-browsers
+      - image: circleci/openjdk:8-jdk-browsers
+    
     steps:
     
       - checkout
