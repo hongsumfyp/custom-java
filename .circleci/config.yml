@@ -31,6 +31,6 @@ jobs:
             source ~/.bashrc
       - run:
           command: |
-            url -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+            bash <(curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer)
             global
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
