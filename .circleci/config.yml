@@ -21,6 +21,6 @@ jobs:
       - run: sudo rm -rf /var/lib/apt/lists/*
       - run: sudo apt-get update
       - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
-      - run: sudo easy_install3 pip
-      - run: sudo apt-get install python3-setuptools
+      - run: sudo easy_install pip
+      - run: sudo apt-get install python-setuptools
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
