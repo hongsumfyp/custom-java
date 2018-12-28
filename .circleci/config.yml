@@ -26,6 +26,7 @@ jobs:
       - run: curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
       - run: 
           command: |
+            rm -rf $HOME/.pyenv
             git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
       - run: 
           command: | 
