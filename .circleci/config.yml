@@ -21,5 +21,22 @@ jobs:
       - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
       - run: sudo rm -rf /var/lib/apt/lists/*
       - run: sudo apt-get update
-      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java      
+      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+      - run:
+          command: | 
+            sudo apt-get install python-setuptools
+            sudo easy_install pip
+            sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm git
+      - run:
+          command: | 
+            curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+            echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc  
+            
+            ls /home/circleci/.pyenv/
+      - run:
+          command: | 
+            pyenv install 3.5.2
+            pyenv global 3.5.2
       - run: bash <(curl -s -s https://raw.githubusercontent.com/hongsumfyp/scantistcircle/master/ci-circle.sh)   
