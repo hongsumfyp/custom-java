@@ -6,10 +6,10 @@ version: 2
 jobs:
   build:
     working_directory: ~/JavaVulnerableLab-circle
-    machine:
-      pre:
-        - cat /etc/*release
-        - pyenv global 3.5.2    
+    
+    docker:
+      # specify the version you desire here
+      -image: circleci/openjdk:8-jdk-browsers 
 
 
     steps:
