@@ -24,7 +24,7 @@ jobs:
       - run: sudo apt-get install python-setuptools
       - run: 
           command: |
-            git clone https://github.com/pyenv/pyenv.git /root/.pyenv
+            sudo git clone https://github.com/pyenv/pyenv.git /root/.pyenv
       - run: 
           command: | 
             echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
