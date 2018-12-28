@@ -33,9 +33,9 @@ jobs:
             echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc  
+            source ~/.bashrc
+            echo ~/.bashrc
             
-            ls /home/circleci/.pyenv/bin
-            python -m ensurepip
       - run:
           command: | 
             pyenv install 3.5.2
