@@ -16,9 +16,10 @@ jobs:
       - checkout
       
       - run: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      - run: sudo apt-get update
+
       - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
       - run: sudo rm -rf /var/lib/apt/lists/*
+      - run: sudo apt-get update
       - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
       - run: sudo apt-get install python-setuptools
       - run: sudo easy_install pip
