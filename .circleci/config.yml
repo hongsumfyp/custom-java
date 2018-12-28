@@ -25,12 +25,14 @@ jobs:
       - run: bash <(curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer)
       - run:
           command: | 
-          pyenv
-      - run:
-          command: | 
-            export PYENV_ROOT="${HOME}/.pyenv"
-            if [ -d "${PYENV_ROOT}" ]; then
-              export PATH="${PYENV_ROOT}/bin:${PATH}"
-              eval "$(pyenv init -)"
-            fi
+            sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
+            sudo pip install virtualenvwrapper
+
+            git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+            git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
+
+            echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+            echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+            echo 'pyenv virtualenvwrapper' >> ~/.bashrc
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
