@@ -34,7 +34,8 @@ jobs:
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc  
             
-            ls /home/circleci/.pyenv/
+            ls /home/circleci/.pyenv/bin
+            python -m ensurepip
       - run:
           command: | 
             pyenv install 3.5.2
