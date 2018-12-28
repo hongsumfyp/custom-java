@@ -8,6 +8,8 @@ jobs:
     working_directory: ~/JavaVulnerableLab-circle
     
     docker:
+    machine:
+      image: circleci/classic:201808-01
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk-browsers
     
