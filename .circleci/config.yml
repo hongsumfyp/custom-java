@@ -26,6 +26,7 @@ jobs:
           command: |
             git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
       - run: 
-          command: |  
+          command: | 
+            cd $HOME/.pyenv
             pyenv version           
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
