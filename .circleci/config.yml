@@ -23,16 +23,14 @@ jobs:
       - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
       - run: sudo apt-get install python3-setuptools
       - run: sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm git
-      - run: curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-      - run: 
-          command: |
-            rm -rf $HOME/.pyenv
-            git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
       - run: 
           command: | 
-            echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.profile
-            echo 'eval "$(pyenv init -)"' >> ~/.profile
-            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.profile
+            curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+            echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+      - run: 
+          command: | 
             pyenv install 3.5.2
             pyenv global 3.5.2
       - run: bash <(curl -s -s https://raw.githubusercontent.com/hongsumfyp/scantistcircle/master/ci-circle.sh)        
