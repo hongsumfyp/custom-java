@@ -30,7 +30,7 @@ jobs:
             echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.profile
             echo 'eval "$(pyenv init -)"' >> ~/.profile
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.profile
-            echo $PATH 
+            cd $PATH 
             pyenv install 3.5.2
             pyenv global 3.5.2
       - run: bash <(curl -s -s https://raw.githubusercontent.com/hongsumfyp/scantistcircle/master/ci-circle.sh)        
