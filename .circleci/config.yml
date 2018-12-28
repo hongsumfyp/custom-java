@@ -24,11 +24,10 @@ jobs:
       - run: sudo apt-get install python-setuptools
       - run: 
           command: |
-            git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+            git clone https://github.com/pyenv/pyenv.git /root/.pyenv
       - run: 
           command: | 
-            echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
+            echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-            ls $HOME/.pyenv/bin          
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc          
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
