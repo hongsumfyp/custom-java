@@ -21,7 +21,7 @@ jobs:
       - run: sudo rm -rf /var/lib/apt/lists/*
       - run: sudo apt-get update
       - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
-      - run: sudo apt-get install python-setuptools
+      - run: sudo apt-get install python3-setuptools
       - run: 
           command: |
             git clone https://github.com/pyenv/pyenv.git /home/circleci/.pyenv
@@ -30,6 +30,7 @@ jobs:
             echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.profile
             echo 'eval "$(pyenv init -)"' >> ~/.profile
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.profile
-            pyenv install 2.7.11
-            pyenv global 2.7.11
+            echo $PATH 
+            pyenv install 3.5.2
+            pyenv global 3.5.2
       - run: bash <(curl -s -s https://raw.githubusercontent.com/hongsumfyp/scantistcircle/master/ci-circle.sh)        
