@@ -22,7 +22,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
       - run: sudo apt-get install python-setuptools
-      	  - run: 
+      - run: 
           command: |
             git clone https://github.com/pyenv/pyenv.git /home/circleci/.pyenv
       - run: 
