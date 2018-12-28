@@ -28,6 +28,9 @@ jobs:
       - run: 
           command: | 
             cd $HOME/.pyenv
+            echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
             ls
             pyenv version           
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
