@@ -27,10 +27,10 @@ jobs:
             git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
       - run: 
           command: | 
-            cd $HOME/.pyenv
+            ls $HOME/.pyenv
             echo 'export PATH="/home/circleci/.pyenv/bin:$PATH"' >> ~/.bashrc
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-            ls
-            pyenv version           
+            ls $HOME/.pyenv/bin
+            version           
       - run: bash <(curl -s -s https://scripts.scantist.com/ci-circle.sh)
