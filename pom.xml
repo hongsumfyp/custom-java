@@ -49,7 +49,33 @@
 		<groupId> com.sparkjava</groupId>
 		<artifactId>spark-core</artifactId>
 		<version>2.7.2</version>
-	</dependency>	  	
+	</dependency>
+	  
+	  <dependency>
+	<groupId>org.primefaces</groupId>
+	<artifactId>primefaces</artifactId>
+	<version>6.1.RC3</version>
+</dependency>	
+<dependency>
+	<groupId>org.apache.poi</groupId>
+	<artifactId>poi</artifactId>
+	<version>REL_3_16_BETA1</version>
+</dependency>
+<dependency>
+	<groupId>org.apache.geode</groupId>
+	<artifactId>geode-core</artifactId>
+	<version>rel/v1.5.0.RC1</version>
+</dependency>	
+<dependency>
+	<groupId>org.glassfish.grizzly</groupId>
+	<artifactId>grizzly-project</artifactId>
+	<version>2_3_29</version>
+</dependency>		
+<dependency>
+	<groupId>org.apache.cassandra</groupId>
+	<artifactId>cassandra-all</artifactId>
+	<version>cassandra-3.3</version>
+</dependency>
 
 	  
 	<dependency>
