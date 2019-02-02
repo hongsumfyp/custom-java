@@ -51,14 +51,9 @@
 		<version>2.7.2</version>
 	</dependency>	  
 	<dependency>
-		<groupId>org.apache.karaf</groupId>
-		<artifactId>org.apache.karaf.client</artifactId>
-		<version>karaf-4.0.4</version>
-	</dependency>	
-	<dependency>
-		<groupId>org.apache.axis2</groupId>
-		<artifactId>axis2</artifactId>
-		<version>1.7</version>
+		<groupId>org.apache.hive</groupId>
+		<artifactId>hive-webhcat</artifactId>
+		<version>rel/release-3.0.0</version>
 	</dependency>
 	  
 	<dependency>
