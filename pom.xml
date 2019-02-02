@@ -54,27 +54,27 @@
 	  <dependency>
 	<groupId>org.primefaces</groupId>
 	<artifactId>primefaces</artifactId>
-	<version>6.1.RC3</version>
+	<version>6.1</version>
 </dependency>	
 <dependency>
 	<groupId>org.apache.poi</groupId>
 	<artifactId>poi</artifactId>
-	<version>REL_3_16_BETA1</version>
+	<version>3.16</version>
 </dependency>
 <dependency>
 	<groupId>org.apache.geode</groupId>
 	<artifactId>geode-core</artifactId>
-	<version>1.5.0.RC1</version>
+	<version>1.5.0</version>
 </dependency>	
 <dependency>
 	<groupId>org.glassfish.grizzly</groupId>
 	<artifactId>grizzly-project</artifactId>
-	<version>2_3_29</version>
+	<version>2.3</version>
 </dependency>		
 <dependency>
 	<groupId>org.apache.cassandra</groupId>
 	<artifactId>cassandra-all</artifactId>
-	<version>cassandra-3.3</version>
+	<version>3.3</version>
 </dependency>
 
 	  
