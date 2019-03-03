@@ -6,7 +6,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/JavaVulnerableLab-circle
+    working_directory: ~/custom-java
     
     docker:
       # specify the version you desire here
